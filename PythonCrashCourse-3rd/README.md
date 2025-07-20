@@ -12,23 +12,41 @@ This repository contains my personal solutions to the **"Try It Yourself"** exer
 Each chapter has a separate Python file containing the respective solutions:
 PythonCrashCourse-3rd/
 ├── Chapter_01.py  # Chapter 1: Getting Started
+
 ├── Chapter_02.py  # Chapter 2: Variables and Simple Data Types
+
 ├── Chapter_03.py  # Chapter 3: Introducing Lists
+
 ├── Chapter_04.py  # Chapter 4: Working with Lists
+
 ├── Chapter_05.py  # Chapter 5: If Statements
+
 ├── Chapter_06.py  # Chapter 6: Dictionaries
+
 ├── Chapter_07.py  # Chapter 7: User Input and While Loops
+
 ├── Chapter_08.py  # Chapter 8: Functions
+
 ├── Chapter_09.py  # Chapter 9: Classes
+
 ├── Chapter_10.py  # Chapter 10: Files and Exceptions
+
 ├── Chapter_11.py  # Chapter 11: Testing Your Code
+
 ├── Chapter_12.py  # Chapter 12: A Brief Introduction to the Terminal
+
 ├── Chapter_13.py  # Chapter 13: Data Visualization
+
 ├── Chapter_14.py  # Chapter 14: Downloading Data
+
 ├── Chapter_15.py  # Chapter 15: Working with APIs
+
 ├── Chapter_16.py  # Chapter 16: Projects: Alien Invasion
+
 ├── Chapter_17.py  # Chapter 17: Projects: Data Visualization
+
 └── Chapter_18.py  # Chapter 18: Projects: Web Applications with Django
+
 
 
 # 📚 About the Book
