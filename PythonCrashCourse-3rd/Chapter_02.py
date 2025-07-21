@@ -43,6 +43,25 @@ print(name5.strip())
 filename = "python_notes.txt"
 print(filename.removesuffix('.txt'))
 
+# 2-9. Number Eight: Write addition, subtraction, multiplication, and division operations that each result in the number 8. Be sure to enclose your operations in print() calls to see the results. You should create four lines that look like this: print(5+3). Your output should be four lines with the number 8 appearing once on each line.
+print(5+3)
+print(13-5)
+print(2*4)
+print(int(72/9))
+
+# 2-10. Favorite Number: Use a variable to represent your favorite number. Then, using that variable, create a message that reveals your favorite number. Print that message.
+favorite_number = 7
+print(f"My favorite number is {favorite_number}.")
+
+# 2-11. Adding Comments: Choose two of the programs you wrote in this chapter, and add at least one comment to each. If you don't have anything specific to write because your programs are too simple at this point, just add your name and the date at the top of each program file. Then write one sentence describing what the program does.
+# This program will print my name:
+print("Rasel Ahmed")
+# This program will print current date/time:
+import time
+print(f"{time.ctime()}\n")
+
+# 2-12. Zen of Python: Enter import this into a Python terminal session and skim through the additional principles.
+import this
 
 
 
