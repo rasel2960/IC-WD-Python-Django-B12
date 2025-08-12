@@ -4,5 +4,32 @@
 pizzas = ['pepperoni', 'mushroom', 'sausage']
 for pizza in pizzas:
     print(f"I like {pizza} pizza.")
-print(f"I really love pizza!")
+print(f"\nI really love pizza!")
 
+print("\n")
+# 4-11. Make a copy of the list of pizzas, and call it friend_pizzas. Then, do the following:
+# - Add a new pizza to the original list.
+# - Add a different pizza to the list friend_pizzas.
+# - Prove that you have two separate lists. Print the message 'My favorite pizzas are:'
+#   Then use a for loop to print the first list. Print the message 'My friend's favorite pizzas are:'
+#   Then use a for loop to print the second list. Make sure each new pizza is stored in the appropriate list.
+
+friend_pizzas = pizzas[:]
+pizzas.append('new Pizza')
+friend_pizzas.append('different Pizza')
+print(pizzas)
+print(friend_pizzas)
+
+print("\n")
+print(f"My favorite pizzas are:")
+print(pizzas)
+
+print(f"\nMy friend's favorite pizzas are:")
+print(friend_pizzas)
+
+print(f"\nMy favorite pizzas are:")
+for pizza in pizzas:
+    print("\t",pizza)
+print(f"\nMy friend's favorite pizzas are:")
+for pizza in friend_pizzas:
+    print("\t",pizza)

@@ -1,12 +1,16 @@
-squares = []
-for value in range(1,11):
-    square = value ** 2
-    squares.append(square)
-print(squares)
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[0:3])
 
-for value in range(1,11):
-    squares.append(value ** 2)
-print(squares)
+print(f'Here are the first three players on my team:')
+for player in players[0:3]:
+    print(player.title())
 
-squares = [value ** 2 for value in range(1,11)]
-print(squares)
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friend_foods = my_foods[:]
+print(my_foods)
+print(friend_foods)
+my_foods.append('cannoli')
+friend_foods.append('ice cream')
+print(my_foods)
+print(friend_foods)
+
