@@ -4,6 +4,7 @@
 # number for each person, and store each as a value in your dictionary. Print
 # each person’s name and their favorite number. For even more fun, poll a few
 # friends and get some actual data for your program.
+
 favorite_numbers = {
     'alice': 7,
     'bob': 3,
@@ -11,18 +12,25 @@ favorite_numbers = {
     'dave': 9,
     'eve': 2,
 }
-for name, number in favorite_numbers.items():
-    print(f"Hey {name.title()}, your favourite number is {number}.")
+
+# 6-10. Favorite Numbers:
+# Modify your program from Exercise 6-2 (page 98)
+# so each person can have more than one favorite number.
+# Then print each person’s name along with their favorite numbers.
+
+favorite_numbers = {
+    'alice': [7, 14],
+    'bob': [3, 6],
+    'charlie': [5, 10],
+    'dave': [9, 18],
+    'eve': [2, 4],
+}
+
+for name, numbers in favorite_numbers.items():
+    print(f"\nHey {name.title()}, your favourite number is: ")
+    for number in numbers:
+        print(f"\t- {number}")
 print("\n")
-print(favorite_numbers)
-print()
 
 # For even more fun, poll a few friends and get some actual data for your program.
-for name, number in favorite_numbers.items():
-    num = float(input(f"Hello, {name.title()}! What is your favorite number? "))
-    if num.is_integer():
-        num = int(num)
-    favorite_numbers[name] = num
-    print(f"Thanks, {name.title()}! Your favorite number is now {number}")
-print()
-print(favorite_numbers)
+
