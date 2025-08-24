@@ -8,6 +8,11 @@ Make an instance called restaurant from your class.
 Print the two attributes individually, and then call both methods.
 """
 
+"""
+9-2. Three Restaurants:
+Start with your class from Exercise 9-1.
+Create three different instances from the class, and call describe_restaurant() for each instance.
+"""
 class Restaurant:
 
     def __init__(self, restaurant_name, cuisine_type):
@@ -15,14 +20,19 @@ class Restaurant:
         self.cuisine_type = cuisine_type
 
     def describe_restaurant(self):
-        print(f"The name of the restaurant is : {self.restaurant_name}.")
-        print(f"It's famous menue is : {self.cuisine_type}.")
+        print(f"The restaurant '{self.restaurant_name.title()}' has a cuisine of '{self.cuisine_type.title()}'")
 
     def open_restaurant(self):
-        print(f"The restaurant is now open")
+        print(f"The restaurant {self.restaurant_name} is open.")
 
-restaurant = Restaurant('Star Kabab' ,'Mutton Leg Roast')
-print(restaurant.restaurant_name)
-print(restaurant.cuisine_type)
-restaurant.describe_restaurant()
-restaurant.open_restaurant()
+# Making an instance of Restaurant Class
+restaurant1 = Restaurant("Korai Gosto", "Kacchi")
+restaurant2 = Restaurant("Xinxian", "Thai Soup")
+restaurant3 = Restaurant("KFC", "Fried chicken")
+
+# Calling describe_restaurant() method
+restaurant1.describe_restaurant()
+restaurant2.describe_restaurant()
+restaurant3.describe_restaurant()
+
+
