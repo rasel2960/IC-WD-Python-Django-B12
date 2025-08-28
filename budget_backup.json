@@ -1,0 +1,31 @@
+{
+  "transactions": [
+    {
+      "description": "Initial Deposit",
+      "amount": 100.0,
+      "category": "Income",
+      "date": "2025-08-26 08:39:13"
+    },
+    {
+      "description": "Test Transaction",
+      "amount": -95.0,
+      "category": "General",
+      "date": "2025-08-26 08:39:35"
+    },
+    {
+      "description": "'home'",
+      "amount": -500.0,
+      "category": "General",
+      "date": "2025-08-26 20:29:54"
+    },
+    {
+      "description": "alhadi",
+      "amount": 100.0,
+      "category": "Income",
+      "date": "2025-08-27 21:12:13"
+    }
+  ],
+  "monthly_budgets": {
+    "'General'": 500.0
+  }
+}

@@ -48,14 +48,22 @@ class Battery:
         # Print a statement describing the battery size.
         print(f"This car has a {self.battery_size}-kwh battery size.")
 
+    def upgrade_battery(self):
+        if self.battery_size != 65:
+            self.battery_size = 65
+            print("Upgraded the battery to 65 kWh.")
+        else:
+            print("The battery is already upgraded.")
+
     def get_range(self):
         # Print a statement about the range this battery provides.
         if self.battery_size == 40:
             range = 150
         elif self.battery_size == 65:
             range = 225
-
         print(f"This car can go about {range} miles on a full charge")
+
+
 # Creating a child Class
 class ElectricCar(Car):
     # Represents aspects of a car, specific to electric vehicles.
@@ -74,3 +82,10 @@ class ElectricCar(Car):
     # Overriding Methods from the Parent Class
     def fill_gas_tank(self):
         print(f"This Electric Car doesn't have a gas tank")
+
+nissan = ElectricCar('Nissan', 'maruti', 2004)
+print(nissan.get_descriptive_name())
+nissan.battery.get_range()
+nissan.battery.upgrade_battery()
+nissan.battery.get_range()
+nissan.battery.upgrade_battery()

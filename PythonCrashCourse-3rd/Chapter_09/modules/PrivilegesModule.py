@@ -55,11 +55,11 @@ class Privileges:
         else:
                 print("\t- The user has no privileges")
 
-ayesha = Admin('Rufayadah', 'ayesha', 'ayesha23', 'admin')
-ayesha.describe_user()
-
-ayesha.privileges.show_privileges()
-
-print(f"Adding privileges....")
-ayesha.privileges.privileges = ['can add post', 'can delete post', 'can ban user', 'can moderate comments', 'can invite users']
-ayesha.privileges.show_privileges()
+# ayesha = Admin('Rufayadah', 'ayesha', 'ayesha23', 'admin')
+# ayesha.describe_user()
+#
+# ayesha.privileges.show_privileges()
+#
+# print(f"Adding privileges....")
+# ayesha.privileges.privileges = ['can add post', 'can delete post', 'can ban user', 'can moderate comments', 'can invite users']
+# ayesha.privileges.show_privileges()

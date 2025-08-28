@@ -1,0 +1,2 @@
+In Python, you can visualize data.
+In Python, you can develop a web application using flask.
