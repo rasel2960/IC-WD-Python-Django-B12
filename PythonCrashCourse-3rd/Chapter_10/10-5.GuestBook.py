@@ -7,16 +7,30 @@ Make sure each entry appears on a new line in the file.
 
 from pathlib import Path
 file_path = Path('files/guest_book.txt')
-names = []
 
+message = "\nPlease enter your name\n"
+message += "or enter 'q' to quit: "
+
+guest_names = []
 while True:
-    message = "Please enter your name\n"
-    message += "or enter 'q' to quit: "
     name = input(message)
     if name.lower() == 'q':
         break
-    names.append(name)
+    print(f"Thanks {name}, we'll add you to the guest book.")
+    guest_names.append(name)
 
-names = "\n".join(names)
-
+# Method 1
+names = "\n".join(guest_names)
 file_path.write_text(names.title())
+
+# # Method 2
+# file_string = ''
+# for name in guest_names:
+#     file_string += f"{name.title()}\n"
+# file_path.write_text(file_string)
+
+# # Method 3 with append mode
+# with file_path.open('a') as file:
+#     for name in guest_names:
+#         file.write(f"{name.title()}\n")
+
