@@ -1,5 +1,6 @@
 # This is a simple bank account management system.
 # Developed by Rasel Ahmed.
+# E-mail: ah.moon90@gmail.com
 
 import json
 from datetime import datetime
@@ -287,6 +288,49 @@ class BankSystem:
         user_choice = input("\nPress Enter to go to Account Menu\n> ")
 
 
+    # View Account Statement
+    def view_account_statement(self, user_account, all_customers):
+        # Check if Transactions exists in History
+        if 'transaction_history' not in all_customers[user_account]:
+            print("No Transaction Found!")
+            input("\nPress Enter to return to Account Menu\n> ")
+            return
+
+        transactions = all_customers[user_account]['transaction_history']
+
+        # Print Customer Info as Header
+        print("=" * 77)
+        print(f"{'Account Number':<16} : {user_account}")
+        print(f"{'Account Title':<16} : {all_customers[user_account]['ac_title']}")
+        print("=" * 77)
+
+        # Printing Statement Header Row
+        print(f"{'Trxn Date':<10} | {'Description':<20} | {'Debit':>10} | {'Credit':>10} | {'Closing Balance':>15}")
+        print("=" * 77) # Line Separator
+
+        # Printing Each Transactions in Each Row
+        for transaction in transactions:
+            date = transaction['date'][:10]
+            description = transaction['description']
+            debit = f"{transaction['debit']:.2f}" if transaction['debit'] else ""
+            credit = f"{transaction['credit']:.2f}" if transaction['credit'] else ""
+            closing_balance = f"{transaction['closing_balance']:.2f}"
+
+            print(f"{date:<10} | {description:<20} | {debit:>10} | {credit:>10} | {closing_balance:>15}")
+
+
+        # Print Total Transaction Summary
+        total_debit = sum(t['debit'] for t in transactions if t['debit'])
+        total_credit = sum(t['credit'] for t in transactions if t['credit'])
+
+        print("=" * 77)  # Line Separator
+        print(f"{'':<10} | {'Total':<20} | {total_debit:>10.2f} | {total_credit:>10.2f} | {'':>15}")
+        print("=" * 77)  # Line Separator
+
+        input("\nPress Enter to return to Account Menu\n> ")
+
+
+
     def show_account_menu(self, user_account, all_customers):
         customer_name = all_customers[user_account]['ac_title']
         account_number = all_customers[user_account]['ac_number']
@@ -304,7 +348,7 @@ class BankSystem:
             print(f"\t2. Deposit Money")
             print(f"\t3. Withdraw Money")
             print(f"\t4. View Transaction History")
-            print(f"\t5. Exit to Main Menu")
+            print(f"\t5. Exit")
             print(f"=====================================")
             print(f"Choose an option (1-5): ")
             user_choice = input("> ").strip()
@@ -315,9 +359,9 @@ class BankSystem:
             elif user_choice == '3':
                 self.withdraw_money(user_account, all_customers)
             elif user_choice == '4':
-                print(f"View Transaction History feature is coming soon!")
+                self.view_account_statement(user_account, all_customers)
             elif user_choice == '5':
-                print("Returning to the main menu...")
+                print("Exiting the Program...")
                 break
             else:
                 print("Invalid choice. Please select a valid option (1-5).")

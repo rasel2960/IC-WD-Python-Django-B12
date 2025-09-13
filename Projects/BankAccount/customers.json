@@ -27,7 +27,7 @@
         "ac_number": "0112000022",
         "ac_password": "112233",
         "ac_open_date": "2025-09-05 21:11:05",
-        "current_balance": 8500.0,
+        "current_balance": 9500.0,
         "transaction_history": [
             {
                 "date": "2025-09-06 20:45:12",
@@ -56,6 +56,20 @@
                 "debit": null,
                 "credit": 5000.0,
                 "closing_balance": 8500.0
+            },
+            {
+                "date": "2025-09-13 13:11:21",
+                "description": "Al hadi",
+                "debit": null,
+                "credit": 2500.0,
+                "closing_balance": 11000.0
+            },
+            {
+                "date": "2025-09-13 13:12:04",
+                "description": "Rufaydah ayesha",
+                "debit": 1500.0,
+                "credit": null,
+                "closing_balance": 9500.0
             }
         ]
     },
